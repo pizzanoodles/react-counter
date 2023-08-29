@@ -1,24 +1,24 @@
 import { useState } from "react";
 
 const Counter = () => {
-	
-  const [number, setNumber] = useState(0);
+    const [number, setNumber] = useState(0);
 
-  function add() {
-    setNumber(number + 1);
-  }
+    const onIncrease = () => {
+        setNumber(number + 1);
+        // handleCountChange(index, 1);
+    };
 
-  function minus() {
-    setNumber(number - 1);
-  }
+    const onDecrease = () => {
+        setNumber(number - 1);
+    };
 
-  return (
-    <div>
-      <button onClick={add}>+</button>
-      <span>{number}</span>
-      <button onClick={minus}>-</button>
-    </div>
-  );
+    return (
+        <div>
+            <button onClick={onIncrease}>+</button>
+            <span>{number}</span>
+            <button onClick={onDecrease}>-</button>
+        </div>
+    );
 };
 
 export default Counter;

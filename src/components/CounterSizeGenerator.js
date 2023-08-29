@@ -6,7 +6,7 @@ const CounterSizeGenerator = (props) => {
 
     const onInputChange = (event) => {
         const inputSize = parseInt(event.target.value);
-        if (inputSize > 0) {
+        if (inputSize >= 0) {
             dispatch(updateSize(inputSize));
         }
     };
